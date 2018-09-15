@@ -15,7 +15,6 @@ import java.util.List;
  * @author YB
  * @Date: 2018/9/15 10:45
  */
-@Service
 public class BaseUserBiz {
 
     @Autowired

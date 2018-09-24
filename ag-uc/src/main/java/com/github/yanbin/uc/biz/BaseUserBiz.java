@@ -19,6 +19,7 @@ import java.util.List;
  * @Date: 2018/9/15 10:45
  */
 
+
 @Service
 @Transactional
 public class BaseUserBiz extends BaseBiz<BaseUserMapper,BaseUser> {

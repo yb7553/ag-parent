@@ -1,6 +1,7 @@
 package com.github.yanbin.uc.biz;
 
 import com.github.yanbin.common.biz.BaseBiz;
+import com.github.yanbin.common.exception.BaseException;
 import com.github.yanbin.uc.dao.BaseUserDao;
 import com.github.yanbin.uc.entity.BaseUser;
 import com.github.yanbin.uc.mapper.BaseUserMapper;
@@ -21,5 +22,6 @@ import java.util.List;
 @Service
 @Transactional
 public class BaseUserBiz extends BaseBiz<BaseUserMapper,BaseUser> {
+
 
 }

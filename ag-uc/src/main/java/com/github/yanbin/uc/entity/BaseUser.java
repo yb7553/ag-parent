@@ -1,10 +1,12 @@
 package com.github.yanbin.uc.entity;
 
+import java.io.Serializable;
 import java.util.Date;
+import java.util.Objects;
 import javax.persistence.*;
 
 @Table(name = "base_user")
-public class BaseUser {
+public class BaseUser implements Serializable {
     @Id
     private Integer id;
 
@@ -30,36 +32,33 @@ public class BaseUser {
 
     private String type;
 
-    /**
-     * 状态(0:正常,1:锁定)
-     */
     private String status;
 
     private String description;
 
-    @Column(name = "create_date")
-    private Date createDate;
+    @Column(name = "crt_time")
+    private Date crtTime;
 
-    @Column(name = "create_by")
-    private String createBy;
+    @Column(name = "crt_user")
+    private String crtUser;
 
-    @Column(name = "create_name")
-    private String createName;
+    @Column(name = "crt_name")
+    private String crtName;
 
-    @Column(name = "create_host")
-    private String createHost;
+    @Column(name = "crt_host")
+    private String crtHost;
 
-    @Column(name = "update_date")
-    private Date updateDate;
+    @Column(name = "upd_time")
+    private Date updTime;
 
-    @Column(name = "update_by")
-    private String updateBy;
+    @Column(name = "upd_user")
+    private String updUser;
 
-    @Column(name = "update_name")
-    private String updateName;
+    @Column(name = "upd_name")
+    private String updName;
 
-    @Column(name = "update_host")
-    private String updateHost;
+    @Column(name = "upd_host")
+    private String updHost;
 
     private String attr1;
 
@@ -232,18 +231,14 @@ public class BaseUser {
     }
 
     /**
-     * 获取状态(0:正常,1:锁定)
-     *
-     * @return status - 状态(0:正常,1:锁定)
+     * @return status
      */
     public String getStatus() {
         return status;
     }
 
     /**
-     * 设置状态(0:正常,1:锁定)
-     *
-     * @param status 状态(0:正常,1:锁定)
+     * @param status
      */
     public void setStatus(String status) {
         this.status = status;
@@ -264,115 +259,115 @@ public class BaseUser {
     }
 
     /**
-     * @return create_date
+     * @return crt_time
      */
-    public Date getCreateDate() {
-        return createDate;
+    public Date getCrtTime() {
+        return crtTime;
     }
 
     /**
-     * @param createDate
+     * @param crtTime
      */
-    public void setCreateDate(Date createDate) {
-        this.createDate = createDate;
+    public void setCrtTime(Date crtTime) {
+        this.crtTime = crtTime;
     }
 
     /**
-     * @return create_by
+     * @return crt_user
      */
-    public String getCreateBy() {
-        return createBy;
+    public String getCrtUser() {
+        return crtUser;
     }
 
     /**
-     * @param createBy
+     * @param crtUser
      */
-    public void setCreateBy(String createBy) {
-        this.createBy = createBy;
+    public void setCrtUser(String crtUser) {
+        this.crtUser = crtUser;
     }
 
     /**
-     * @return create_name
+     * @return crt_name
      */
-    public String getCreateName() {
-        return createName;
+    public String getCrtName() {
+        return crtName;
     }
 
     /**
-     * @param createName
+     * @param crtName
      */
-    public void setCreateName(String createName) {
-        this.createName = createName;
+    public void setCrtName(String crtName) {
+        this.crtName = crtName;
     }
 
     /**
-     * @return create_host
+     * @return crt_host
      */
-    public String getCreateHost() {
-        return createHost;
+    public String getCrtHost() {
+        return crtHost;
     }
 
     /**
-     * @param createHost
+     * @param crtHost
      */
-    public void setCreateHost(String createHost) {
-        this.createHost = createHost;
+    public void setCrtHost(String crtHost) {
+        this.crtHost = crtHost;
     }
 
     /**
-     * @return update_date
+     * @return upd_time
      */
-    public Date getUpdateDate() {
-        return updateDate;
+    public Date getUpdTime() {
+        return updTime;
     }
 
     /**
-     * @param updateDate
+     * @param updTime
      */
-    public void setUpdateDate(Date updateDate) {
-        this.updateDate = updateDate;
+    public void setUpdTime(Date updTime) {
+        this.updTime = updTime;
     }
 
     /**
-     * @return update_by
+     * @return upd_user
      */
-    public String getUpdateBy() {
-        return updateBy;
+    public String getUpdUser() {
+        return updUser;
     }
 
     /**
-     * @param updateBy
+     * @param updUser
      */
-    public void setUpdateBy(String updateBy) {
-        this.updateBy = updateBy;
+    public void setUpdUser(String updUser) {
+        this.updUser = updUser;
     }
 
     /**
-     * @return update_name
+     * @return upd_name
      */
-    public String getUpdateName() {
-        return updateName;
+    public String getUpdName() {
+        return updName;
     }
 
     /**
-     * @param updateName
+     * @param updName
      */
-    public void setUpdateName(String updateName) {
-        this.updateName = updateName;
+    public void setUpdName(String updName) {
+        this.updName = updName;
     }
 
     /**
-     * @return update_host
+     * @return upd_host
      */
-    public String getUpdateHost() {
-        return updateHost;
+    public String getUpdHost() {
+        return updHost;
     }
 
     /**
-     * @param updateHost
+     * @param updHost
      */
-    public void setUpdateHost(String updateHost) {
-        this.updateHost = updateHost;
+    public void setUpdHost(String updHost) {
+        this.updHost = updHost;
     }
 
     /**
@@ -485,5 +480,19 @@ public class BaseUser {
      */
     public void setAttr8(String attr8) {
         this.attr8 = attr8;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        BaseUser baseUser = (BaseUser) o;
+        return Objects.equals(id, baseUser.id) &&
+                Objects.equals(username, baseUser.username);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, username);
     }
 }

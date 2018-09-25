@@ -2,6 +2,7 @@ spring:
   application:
     name: ag-eureka
 
+
 server:
   port: 8761
 
@@ -9,3 +10,10 @@ eureka:
   client:
     register-with-eureka: false
     fetch-registry: false
+
+security:
+  basic:
+    enabled:  true
+  user:
+    name: qoocar
+    password: qoocar

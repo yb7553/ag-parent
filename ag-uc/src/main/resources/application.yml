@@ -3,7 +3,7 @@ spring:
     name: user-center
   datasource:
     name: test
-    url: jdbc:mysql://localhost:3306/ag_admin?useUnicode=true&characterEncoding=UTF8&useSSL=false
+    url: jdbc:mysql://10.0.3.22:3306/ag_admin?useUnicode=true&characterEncoding=UTF8&useSSL=false
     username: root
     password:
     # 使用druid数据源
@@ -26,10 +26,7 @@ spring:
 mybatis:
   basepackage: com.github.yanbin.uc.mapper
   xmlLocation: classpath:mapper/**/*.xml
-eureka:
-  client:
-    service-url:
-      defaultZone: http://localhost:8761/eureka
+
 
 server:
   port: 7771

@@ -7,3 +7,8 @@ spring:
       label: master
       name: uc
       profile: dev
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://qoocar:qoocar@localhost:8761/eureka

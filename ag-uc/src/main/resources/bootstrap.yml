@@ -8,6 +8,12 @@ spring:
       name: uc
       profile: dev
 
+  sleuth:
+    sampler:
+      percentage: 0.8
+  zipkin:
+    base-url: http://127.0.0.1:9411
+
 eureka:
   client:
     service-url:

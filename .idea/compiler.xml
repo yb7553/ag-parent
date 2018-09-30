@@ -10,7 +10,10 @@
         <module name="ag-config" />
         <module name="ag-eureka" />
         <module name="ag-uc" />
+        <module name="ag-zipkin" />
         <module name="ag-zuul" />
+        <module name="trace-1" />
+        <module name="trace-2" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -19,7 +22,10 @@
       <module name="ag-eureka" target="1.6" />
       <module name="ag-parent" target="1.6" />
       <module name="ag-uc" target="1.6" />
+      <module name="ag-zipkin" target="1.6" />
       <module name="ag-zuul" target="1.6" />
+      <module name="trace-1" target="1.6" />
+      <module name="trace-2" target="1.6" />
     </bytecodeTargetLevel>
   </component>
 </project>

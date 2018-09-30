@@ -6,6 +6,9 @@
     <file url="file://$PROJECT_DIR$/ag-config" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ag-eureka" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ag-uc" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ag-zipkin" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ag-zuul" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo-trace-1" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo-trace-2" charset="UTF-8" />
   </component>
 </project>

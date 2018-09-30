@@ -10,6 +10,7 @@
         <module>ag-uc</module>
         <module>ag-config</module>
         <module>ag-common</module>
+        <module>ag-zipkin</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>

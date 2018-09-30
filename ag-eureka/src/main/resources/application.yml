@@ -13,7 +13,7 @@ eureka:
 
 security:
   basic:
-    enabled:  true
+    enabled:  false
   user:
     name: qoocar
     password: qoocar

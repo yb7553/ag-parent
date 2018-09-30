@@ -7,7 +7,10 @@
       <module fileurl="file://$PROJECT_DIR$/ag-eureka/ag-eureka.iml" filepath="$PROJECT_DIR$/ag-eureka/ag-eureka.iml" />
       <module fileurl="file://$PROJECT_DIR$/ag-parent.iml" filepath="$PROJECT_DIR$/ag-parent.iml" />
       <module fileurl="file://$PROJECT_DIR$/ag-uc/ag-uc.iml" filepath="$PROJECT_DIR$/ag-uc/ag-uc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ag-zipkin/ag-zipkin.iml" filepath="$PROJECT_DIR$/ag-zipkin/ag-zipkin.iml" />
       <module fileurl="file://$PROJECT_DIR$/ag-zuul/ag-zuul.iml" filepath="$PROJECT_DIR$/ag-zuul/ag-zuul.iml" />
+      <module fileurl="file://$PROJECT_DIR$/demo-trace-1/trace-1.iml" filepath="$PROJECT_DIR$/demo-trace-1/trace-1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/demo-trace-2/trace-2.iml" filepath="$PROJECT_DIR$/demo-trace-2/trace-2.iml" />
     </modules>
   </component>
 </project>

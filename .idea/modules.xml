@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/ag-auth/ag-auth.iml" filepath="$PROJECT_DIR$/ag-auth/ag-auth.iml" />
       <module fileurl="file://$PROJECT_DIR$/ag-common/ag-common.iml" filepath="$PROJECT_DIR$/ag-common/ag-common.iml" />
       <module fileurl="file://$PROJECT_DIR$/ag-config/ag-config.iml" filepath="$PROJECT_DIR$/ag-config/ag-config.iml" />
       <module fileurl="file://$PROJECT_DIR$/ag-eureka/ag-eureka.iml" filepath="$PROJECT_DIR$/ag-eureka/ag-eureka.iml" />

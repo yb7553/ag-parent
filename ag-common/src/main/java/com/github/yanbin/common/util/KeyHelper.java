@@ -69,7 +69,7 @@ public class KeyHelper {
     }
 
     public static void main(String[] args) throws IOException, NoSuchAlgorithmException {
-        generateKey("/Users/ace/git/ag-parent/ag-auth/src/main/resources/client/pub.key","/Users/ace/git/ag-parent/ag-auth/src/main/resources/client/pri.key","1*&623!f");
+        generateKey("D:\\a\\ag-parent\\ag-auth\\src\\main\\resources\\client\\pub.key","D:\\a\\ag-parent\\ag-auth\\src\\main\\resources\\client\\pri.key","1*&623!f");
     }
 }
 

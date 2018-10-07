@@ -1,5 +1,6 @@
 package com.github.yanbin.uc.rest;
 
+import com.github.yanbin.common.context.BaseContextHandler;
 import com.github.yanbin.common.rest.BaseController;
 import com.github.yanbin.uc.biz.BaseUserBiz;
 import com.github.yanbin.uc.entity.BaseUser;
@@ -13,5 +14,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("user")
 public class UserRest extends BaseController<BaseUserBiz,BaseUser> {
-
+    @RequestMapping("/who")
+    public String getCurrentUser(){
+       return BaseContextHandler.getUsername();
+    }
 }

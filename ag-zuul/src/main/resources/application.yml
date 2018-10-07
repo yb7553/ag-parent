@@ -8,6 +8,9 @@ zuul:
     user-center:
       path: /uc/**
       serviceId: user-center
+    auth-server:
+      path: /auth/**
+      serviceId: ag-auth
 
 eureka:
   client:
@@ -16,3 +19,7 @@ eureka:
 
 server:
   port: 8765
+
+jwt:
+  pub-key:
+    path: D:\a\ag-parent\ag-zuul\src\main\resources\pub.key

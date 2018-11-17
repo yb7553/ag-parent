@@ -1,19 +1,123 @@
+---
 spring:
-  application:
-    name: ag-eureka
-
-
+    application:
+        name: huaxia-center
+    profiles: dev
 server:
-  port: 8761
+    port: 8761 #启动端口
 
 eureka:
-  client:
-    register-with-eureka: false
-    fetch-registry: false
+    client:
+        registerWithEureka: false  #false:不作为一个客户端注册到注册中心
+        fetchRegistry: false      #为true时，可以启动，但报异常：Cannot execute request on any known server
+    server:
+        enable-self-preservation: false
+        eviction-interval-timer-in-ms: 10000
 
 security:
   basic:
     enabled:  false
-  user:
-    name: qoocar
-    password: qoocar
+
+---
+spring:
+    application:
+        name: huaxia-center
+    profiles: test
+server:
+    port: 8761 #启动端口
+
+eureka:
+    client:
+        registerWithEureka: false  #false:不作为一个客户端注册到注册中心
+        fetchRegistry: false      #为true时，可以启动，但报异常：Cannot execute request on any known server
+    server:
+        enable-self-preservation: false
+        eviction-interval-timer-in-ms: 10000
+
+security:
+  basic:
+    enabled:  false
+
+---
+spring:
+    application:
+        name: huaxia-center
+    profiles: peer1
+
+server:
+    port: 8761 #启动端口
+
+
+eureka:
+    instance:
+        hostname: eureka-server-peer1
+    client:
+        registerWithEureka: false #false:不作为一个客户端注册到注册中心
+        fetchRegistry: false      #为true时，可以启动，但报异常：Cannot execute request on any known server
+        serviceUrl:
+          defaultZone: http://qoocar:qoocar123@eureka-server-peer2:8762/eureka/,http://qoocar:qoocar123@eureka-server-peer3:8763/eureka/
+    server:
+        enable-self-preservation: false
+        eviction-interval-timer-in-ms: 10000
+
+security:
+    basic:
+      enabled:  true
+    user:
+      name: qoocar
+      password: qoocar
+
+---
+spring:
+    application:
+        name: huaxia-center
+    profiles: peer2
+
+server:
+    port: 8762 #启动端口
+
+eureka:
+    instance:
+        hostname: eureka-server-peer2
+    client:
+        registerWithEureka: false  #false:不作为一个客户端注册到注册中心
+        fetchRegistry: false      #为true时，可以启动，但报异常：Cannot execute request on any known server
+        serviceUrl:
+          defaultZone: http://qoocar:qoocar123@eureka-server-peer1:8761/eureka/,http://qoocar:qoocar123@eureka-server-peer3:8763/eureka/
+    server:
+        enable-self-preservation: false
+        eviction-interval-timer-in-ms: 10000
+
+security:
+    basic:
+      enabled:  true
+    user:
+      name: qoocar
+      password: qoocar
+
+---
+spring:
+    application:
+        name: huaxia-center
+    profiles: peer3
+server:
+    port: 8763 #启动端口
+
+eureka:
+    instance:
+        hostname: eureka-server-peer3
+    client:
+        registerWithEureka: false  #false:不作为一个客户端注册到注册中心
+        fetchRegistry: false      #为true时，可以启动，但报异常：Cannot execute request on any known server
+        serviceUrl:
+          defaultZone: http://qoocar:qoocar123@eureka-server-peer1:8761/eureka/,http://qoocar:qoocar123@eureka-server-peer2:8762/eureka/
+    server:
+        enable-self-preservation: false
+        eviction-interval-timer-in-ms: 10000
+
+security:
+    basic:
+      enabled:  true
+    user:
+      name: qoocar
+      password: qoocar

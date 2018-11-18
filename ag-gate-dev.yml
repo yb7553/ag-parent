@@ -8,10 +8,7 @@ zuul:
       path: /auth/**
       serviceId: ag-auth
 
-eureka:
-  client:
-    service-url:
-      defaultZone: http://qoocar:qoocar@localhost:8761/eureka
+
 
 jwt:
   pub-key:

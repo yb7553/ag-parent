@@ -1,7 +1,7 @@
 ---
 spring:
     application:
-        name: huaxia-center
+        name: ag-eureka
     profiles: dev
 server:
     port: 8761 #启动端口
@@ -21,7 +21,7 @@ security:
 ---
 spring:
     application:
-        name: huaxia-center
+        name: ag-eureka
     profiles: test
 server:
     port: 8761 #启动端口
@@ -41,7 +41,7 @@ security:
 ---
 spring:
     application:
-        name: huaxia-center
+        name: ag-eureka
     profiles: peer1
 
 server:
@@ -70,7 +70,7 @@ security:
 ---
 spring:
     application:
-        name: huaxia-center
+        name: ag-eureka
     profiles: peer2
 
 server:
@@ -98,7 +98,7 @@ security:
 ---
 spring:
     application:
-        name: huaxia-center
+        name: ag-eureka
     profiles: peer3
 server:
     port: 8763 #启动端口

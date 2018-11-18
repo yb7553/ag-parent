@@ -8,6 +8,7 @@ import com.github.yanbin.common.vo.BaseResponse;
 import com.github.yanbin.gate.jwt.JWTUtil;
 import com.netflix.zuul.ZuulFilter;
 import com.netflix.zuul.context.RequestContext;
+import com.sun.xml.internal.bind.v2.TODO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -45,7 +46,8 @@ public class AccessFilter extends ZuulFilter {
         String token = request.getHeader("access-token");
         try {
             IJWTInfo infoFromToken = jwtUtil.getInfoFromToken(token);
-
+            //申请客户端密钥头
+            
             assertEquals(infoFromToken.getUniquename(),"admin");
 
         } catch (Exception e) {

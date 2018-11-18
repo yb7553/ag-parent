@@ -1,0 +1,17 @@
+zuul:
+  prefix: /api
+  routes:
+    user-center:
+      path: /uc/**
+      serviceId: user-center
+    auth-server:
+      path: /auth/**
+      serviceId: ag-auth
+
+
+
+jwt:
+  pub-key:
+    path: D:\a\ag-parent\ag-zuul\src\main\resources\pub.key
+    
+env: test3

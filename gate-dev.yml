@@ -1,0 +1,20 @@
+zuul:
+  prefix: /api
+  routes:
+    user-center:
+      path: /uc/**
+      serviceId: user-center
+    auth-server:
+      path: /auth/**
+      serviceId: ag-auth
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://qoocar:qoocar@localhost:8761/eureka
+
+jwt:
+  pub-key:
+    path: D:\a\ag-parent\ag-zuul\src\main\resources\pub.key
+    
+env: test1

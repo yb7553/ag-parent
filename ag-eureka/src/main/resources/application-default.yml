@@ -10,10 +10,3 @@ eureka:
   client:
     register-with-eureka: false
     fetch-registry: false
-
-security:
-  basic:
-    enabled:  false
-  user:
-    name: qoocar
-    password: qoocar

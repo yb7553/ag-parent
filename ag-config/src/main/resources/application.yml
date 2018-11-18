@@ -5,12 +5,20 @@ spring:
     config:
       server:
         git:
-          uri: https://git.oschina.net/geek_qi/AG-Config.git
+          uri: https://github.com/yb7553/ag-parent.git
+          username: 23218371@qq.com
+          password: yb718293
+          basedir: D:\basedir
+  rabbitmq:
+    host: 106.12.151.12
+    port: 5672
+    username: guest
+    password: guest
 
 eureka:
   client:
     service-url:
-      defaultZone: http://qoocar:qoocar@localhost:8761/eureka
+      defaultZone: http://localhost:8761/eureka
 
 server:
   port: 8750

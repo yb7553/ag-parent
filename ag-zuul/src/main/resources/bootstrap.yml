@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: ag-gate
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: AG-CONFIG
+      profile: dev
+
+server:
+  port: 8765
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka

@@ -17,4 +17,4 @@ jwt:
   pub-key:
     path: D:\a\ag-parent\ag-zuul\src\main\resources\pub.key
     
-env: test2
+env: test3

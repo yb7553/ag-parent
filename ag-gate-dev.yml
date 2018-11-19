@@ -7,8 +7,11 @@ zuul:
     auth-server:
       path: /auth/**
       serviceId: ag-auth
-
-
+rabbitmq:
+  host: 106.12.151.12
+  port: 5672
+  username: guest
+  password: guest
 
 jwt:
   pub-key:

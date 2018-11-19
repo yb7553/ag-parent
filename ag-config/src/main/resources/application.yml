@@ -22,3 +22,9 @@ eureka:
 
 server:
   port: 8750
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+

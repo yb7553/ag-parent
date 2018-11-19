@@ -4,3 +4,14 @@ server:
 spring:
   application:
     name: zipkin-server
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        server-id: ag-config
+      profile: test
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://qoocar:qoocar@localhost:8761/eureka

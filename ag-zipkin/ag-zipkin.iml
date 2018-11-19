@@ -25,6 +25,7 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="Maven: org.springframework.cloud:spring-cloud-starter-eureka:unknown" level="project" />
     <orderEntry type="library" name="Maven: io.zipkin.java:zipkin-server:unknown" level="project" />
     <orderEntry type="library" name="Maven: io.zipkin.java:zipkin-autoconfigure-ui:unknown" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.projectlombok:lombok:1.16.14" level="project" />
